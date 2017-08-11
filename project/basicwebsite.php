@@ -14,17 +14,17 @@
 
         <div class="col-sm-8 blog-main">
 
-            <?php foreach( $posts as $post ) { ?>
+        <?php foreach( $posts as $post ) { ?>
             
           <div class="blog-post">
-              <h2 class="blog-post-title"><?php echo $post['post-title']; ?></h2>
-              <p class="blog-post-meta"><?php echo $post['post-date']; ?> by <?php echo $post['post-author']; ?></p>
-              
-              <?php echo $post['post-content']; ?>
-              
-          </div><!-- /.blog-post -->
+            <h2 class="blog-post-title"><?php echo $post["post-title"]; ?></h2>
+            <p class="blog-post-meta"><?php echo $post["post-date"]; ?> by <a href="#"><?php echo $post["post-author"]; ?></a></p>
+
+              <?php echo $post["post-content"]; ?>
             
-            <?php } ?>
+          </div><!-- /.blog-post -->
+        <?php } ?>
+            
           <nav>
             <ul class="pager">
               <li><a href="#">Previous</a></li>
@@ -33,8 +33,10 @@
           </nav>
 
         </div><!-- /.blog-main -->
-
+          
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <?php include('includes/sidebar.php'); ?>
+        </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
 
